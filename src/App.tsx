@@ -1,10 +1,8 @@
 import './App.css'
 
-function App() {
-
-  return (
+const App:React.FC = ()=>{
+  return(
     <>
-    <p>Hello</p>
     </>
   )
 }
