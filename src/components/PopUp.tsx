@@ -11,8 +11,8 @@ const PopUp: React.FC<Props> = ({ setOk }) => {
     <div className="deletealert">
       <div className="deleteoption">
         <div className="undel">{/* <MdCancel className='undo'/> */}</div>
-        <p>
-          <span style={{ fontWeight: "600" }}>NOTE:</span> You can now drag your
+        <p className="new__feature--text">
+          <span style={{ fontWeight: "600", fontSize:"20px" }}>NOTE:</span> You can now drag your
           tasks from active to completed and vice versa.
         </p>
         <div className="deletediv">
