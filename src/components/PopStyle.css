@@ -8,6 +8,7 @@
     justify-content: center;
     background-color: transparent;
     backdrop-filter: blur(2px);
+    z-index: 2;
 }
 .deleteoption{
     width: 60%;
@@ -17,6 +18,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: white;
+    padding-inline: 7px;
     /* background-color: purple; */
     border: 1px solid gray;
     border-radius: 5px;
