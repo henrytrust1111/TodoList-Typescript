@@ -29,9 +29,12 @@ const SingleTodo: React.FC<Props> = ({ index, todo, todos, setTodos }) => {
   };
   const handleEdit = (e: React.FormEvent, id: number) => {
     e.preventDefault();
+    const newEditTodo: string = editTodo.trim()
+  if(newEditTodo){
     setTodos(
-      todos.map((todo) => (todo.id === id ? { ...todo, todo: editTodo } : todo))
+      todos.map((todo) => (todo.id === id ? { ...todo, todo: newEditTodo } : todo))
     );
+  }
     setEdit(false);
   };
 

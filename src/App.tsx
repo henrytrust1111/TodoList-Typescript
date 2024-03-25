@@ -12,14 +12,25 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
 
+  // const handleAdd = (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   if (todo && todo != " ") {
+  //     setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
+  //     setTodo("");
+  //   }
+  // };
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (todo && todo==="") {
-      setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
-      setTodo("");
+    const trimmedTodo = todo.trim();
+
+    if (trimmedTodo) {
+        setTodos([...todos, { id: Date.now(), todo: trimmedTodo, isDone: false }]);
+        setTodo("");
     }
-  };
+};
+
 
   // console.log(todos);
 
@@ -35,14 +46,14 @@ const App: React.FC = () => {
     let add,
       active = todos,
       complete = completedTodos;
-    if (source.droppableId === "TodosList") {
+    if (source.droppableId === "TodosList1") {
       add = active[source.index];
       active.splice(source.index, 1);
     } else {
       add = complete[source.index];
       complete.splice(source.index, 1);
     }
-    if (destination.droppableId === "TodosList") {
+    if (destination.droppableId === "TodosList1") {
       active.splice(destination.index, 0, add);
     } else {
       complete.splice(destination.index, 0, add);
