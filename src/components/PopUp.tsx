@@ -14,7 +14,7 @@ const PopUp:React.FC<Props>  = ({setOk}) => {
             <div className="undel">
             {/* <MdCancel className='undo'/> */}
             </div>
-            <p>Are you sure you want to delete this product?</p>
+            <p><span style={{fontWeight:"600"}}>NOTE:</span> You can now drag your tasks from active to completed and vice versa.</p>
             <div className= "deletediv">
                 <button onClick={()=>setOk(false)}>OK</button>
             </div>

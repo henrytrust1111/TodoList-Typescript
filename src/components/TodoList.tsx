@@ -18,7 +18,7 @@ const TodoList: React.FC<Props> = ({
 }) => {
   return (
     <div className="container">
-      <Droppable droppableId= "TodosList1">
+      <Droppable droppableId= "TodosList">
         {(provided) => (
           <div
             className="todos"
@@ -39,7 +39,7 @@ const TodoList: React.FC<Props> = ({
           </div>
         )}
       </Droppable>
-      <Droppable droppableId= "TodosRemove">
+      <Droppable droppableId= "TodosRemove1">
         {(provided) => (
           <div
             className="todos remove"
